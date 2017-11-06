@@ -19,8 +19,8 @@ class Cmsscanner(object):
 	def get_info(self):
 		"""获取web的信息"""
 		try:
-			r = requests.get(url=self.target, headers=agent,
-							timeout=5, verify=False)
+			r = requests.get(url=self.target, headers=agent, 
+				timeout=3, verify=False)
 			content = r.text
 			try:
 				title = BeautifulSoup(content, 'lxml').title.text.strip()
@@ -95,14 +95,18 @@ class Cmsscanner(object):
 					print '%s[+] %s   %s%s' %(G, self.target, name, W)
 
 	def run(self):
-		header, body, title = self.get_info()
-		for _id in xrange(1, int(count())):
-			try:
-				self.handle(_id, header, body, title)
-			except Exception as e:
-				pass
-		print '-'*54
-		print u'%s[+] 指纹识别完成, 耗时 %s 秒.%s' %(O, time.time()-self.start, W)
+		try:
+			header, body, title = self.get_info()
+			for _id in xrange(1, int(count())):
+				try:
+					self.handle(_id, header, body, title)
+				except Exception as e:
+					pass
+		except Exception as e:
+			print e
+		finally:
+			print '-'*54
+			print u'%s[+] 指纹识别完成, 耗时 %s 秒.%s' %(O, time.time()-self.start, W)
 
 def usage():
 	print 'usage: python %s http://www.qq.com' %sys.argv[0]
