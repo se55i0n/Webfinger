@@ -75,6 +75,7 @@ class Cmsscanner(object):
 								num += 1
 						if num == len(rule.split('&&')):
 							print '%s[+] %s   %s%s' %(G, self.target, name, W)
+							break
 					else:
 						if self.check_rule(rule, header, body, title):
 							print '%s[+] %s   %s%s' %(G, self.target, name, W)
